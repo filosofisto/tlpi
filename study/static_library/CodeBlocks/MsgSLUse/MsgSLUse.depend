@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1477652349 source:/home/eduardo/temp/MsgSLUse/main.c
+	<stdio.h>
+	<stdlib.h>
+	"message.h"
+

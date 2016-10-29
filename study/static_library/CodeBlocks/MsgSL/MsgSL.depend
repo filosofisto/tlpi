@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1477525624 source:/home/eduardo/temp/MsgSL/main.c
+	"message.h"
+
+1477525643 /home/eduardo/temp/MsgSL/message.h
+	<stdio.h>
+	<time.h>
+	<string.h>
+

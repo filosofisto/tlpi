@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+/eduardo/static_library/NetBeans/MsgSL/build/
+/eduardo/static_library/NetBeans/MsgSL/dist/
+/eduardo/static_library/NetBeans/MsgSLUse/build/
+/eduardo/static_library/NetBeans/MsgSLUse/dist/
+/eduardo/static_library/NetBeans/MsgUse++/build/
+/eduardo/static_library/NetBeans/MsgUse++/dist/

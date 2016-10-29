@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1477748232 source:/home/eduardo/temp/MsgSLUse++/main.cpp
+	<iostream>
+	"Test.h"
+
+1477747857 source:/home/eduardo/temp/MsgSLUse++/src/Test.cpp
+	<iostream>
+	"Test.h"
+	"message.h"
+
+1477748011 /home/eduardo/temp/MsgSLUse++/include/Test.h
+

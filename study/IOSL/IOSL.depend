@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1477787793 source:/home/eduardo/Private/tlpi/study/IOSL/main.c
+	<sys/stat.h>
+	<fcntl.h>
+	<time.h>
+	<unistd.h>
+	"../ErrorSL/tlpi_hdr.h"
+	"io.h"
+
+1477770152 /home/eduardo/Private/tlpi/study/ErrorSL/tlpi_hdr.h
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<errno.h>
+	<string.h>
+	"get_num.h"
+	"error_functions.h"
+	<sys/file.h>
+
+1477770239 /home/eduardo/Private/tlpi/study/ErrorSL/get_num.h
+
+1477770044 /home/eduardo/Private/tlpi/study/ErrorSL/error_functions.h
+
+1477786704 /home/eduardo/Private/tlpi/study/IOSL/io.h
+

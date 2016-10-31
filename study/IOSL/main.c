@@ -17,9 +17,7 @@ stat_io cp(const char *source_file, const char *target_file)
 
     source_fd = open(source_file, O_RDONLY);
     if (source_fd == -1) {
-        result.result_operation = -1;
-        result.seconds = 0.0;
-        result.bytes_processed = 0;
+        up_err_stat_io(&result, ERR_COPY_OPEN_SOURCE);
 
         return result;
     }
@@ -29,7 +27,7 @@ stat_io cp(const char *source_file, const char *target_file)
 
     target_fd = open(target_file, open_flags, file_perms);
     if (target_fd == -1) {
-        up_stat_io(&result, -2, 0.0, 0);
+        up_err_stat_io(&result, ERR_COPY_OPEN_TARGET);
 
         return result;
     }
@@ -45,30 +43,29 @@ stat_io cp(const char *source_file, const char *target_file)
         result.bytes_processed += num_read;
     }
 
-    clock_t end = clock();
-
     if (err_read_write) {
         close(source_fd);
         close(target_fd);
 
-        up_stat_io(&result, -3, 0.0, 0);
+        up_err_stat_io(&result, ERR_COPY_READWRITE);
 
         return result;
     }
 
     if (close(source_fd) == -1) {
-        up_stat_io(&result, -4, 0.0, 0);
+        up_err_stat_io(&result, ERR_COPY_CLOSE_SOURCE);
 
         return result;
     }
 
     if (close(target_fd) == -1) {
-        up_stat_io(&result, -5, 0.0, 0);
+        up_err_stat_io(&result, ERR_COPY_CLOSE_TARGET);
 
         return result;
     }
 
-    result.result_operation = 0;
+    result.result_operation = EXIT_SUCCESS;
+    clock_t end = clock();
     result.seconds = (double)(end - begin) / CLOCKS_PER_SEC;
 
     return result;
@@ -81,16 +78,41 @@ void up_stat_io(stat_io* stat, int result_operation, double seconds, long bytes_
     stat->bytes_processed = bytes_processed;
 }
 
-/*size_t file_length(int file_descriptor)
+void up_err_stat_io(stat_io* stat, int result_operation)
+{
+    stat->result_operation = result_operation;
+    stat->seconds = 0.0;
+    stat->bytes_processed = 0;
+}
+
+size_t file_length(int file_descriptor)
 {
     off_t current_pos = lseek(file_descriptor, (off_t)0, SEEK_CUR);
     size_t ret = lseek(file_descriptor, (off_t)0, SEEK_END);
     lseek(file_descriptor, current_pos, SEEK_SET);
 
     return ret;
-}*/
+}
 
 long bytes_per_second(const stat_io stat)
 {
     return (long) (stat.bytes_processed / stat.seconds);
 }
+
+size_t kbytes(size_t bytes)
+{
+    return bytes / KBYTE;
+}
+size_t mbytes(size_t bytes)
+{
+    return bytes / MBYTE;
+}
+size_t gbytes(size_t bytes)
+{
+    return bytes / GBYTE;
+}
+size_t tbytes(size_t bytes)
+{
+    return bytes / TBYTE;
+}
+

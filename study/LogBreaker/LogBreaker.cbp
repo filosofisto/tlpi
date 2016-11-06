@@ -2,34 +2,29 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ErrorSL" />
+		<Option title="LogBreaker" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ErrorSL" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
+				<Option output="bin/Debug/LogBreaker" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="2" />
+				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-Wall" />
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="bin/Debug/libErrorSL.a" />
+					<Add library="../IOSL/bin/Debug/libIOSL.a" />
+					<Add library="../ErrorSL/bin/Debug/libErrorSL.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ErrorSL" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
+				<Option output="bin/Release/LogBreaker" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
-				<Option type="2" />
+				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
 				<Compiler>
-					<Add option="-Wall" />
 					<Add option="-O2" />
 				</Compiler>
 				<Linker>
@@ -37,16 +32,12 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="ename.c.inc" />
-		<Unit filename="error_functions.c">
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="error_functions.h" />
-		<Unit filename="get_num.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="get_num.h" />
-		<Unit filename="tlpi_hdr.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

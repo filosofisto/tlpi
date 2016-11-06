@@ -5,6 +5,8 @@
 extern "C" {
 #endif // __cplusplus
 
+#include "../ErrorSL/tlpi_hdr.h"
+
 #define BUF_SIZE 1024
 #define ERR_COPY_OPEN_SOURCE -1
 #define ERR_COPY_OPEN_TARGET -2
@@ -29,11 +31,16 @@ typedef struct
  **/
 stat_io cp(const char *, const char *);
 
+stat_io cp_deep(const char *, const char *);
+
 /**
   File length
  **/
 size_t file_length(int);
 
+/**
+  Byte size converters
+  **/
 size_t kbytes(size_t);
 size_t mbytes(size_t);
 size_t gbytes(size_t);
@@ -43,6 +50,11 @@ size_t tbytes(size_t);
  Calcula a quantidade de bytes / segundo
  **/
 long bytes_per_second(const stat_io);
+
+/**
+ Check is is a folder or file
+ **/
+Boolean is_folder(const char *);
 
 #ifdef __cplusplus
 }

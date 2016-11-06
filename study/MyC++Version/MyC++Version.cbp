@@ -2,26 +2,21 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="IOCopy" />
+		<Option title="MyC++Version" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/IOCopy" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/MyC++Version" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
-				<Linker>
-					<Add library="../IOSL/bin/Debug/libIOSL.a" />
-					<Add library="../ErrorSL/bin/Debug/libErrorSL.a" />
-					<Add directory="/home/eduardo/Private/tlpi/study/IOCopy/" />
-				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/IOCopy" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/MyC++Version" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -35,10 +30,9 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

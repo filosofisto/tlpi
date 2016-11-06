@@ -32,6 +32,11 @@ stat_io cp(const char *source_file, const char *target_file)
         return result;
     }
 
+    struct stat fst;
+    fstat(source_fd, &fst);
+    fchown(target_fd, fst.st_uid, fst.st_gid);
+    fchmod(target_fd, fst.st_mode);
+
     Boolean err_read_write = FALSE;
 
     while ((num_read = read(source_fd, buf, BUF_SIZE)) > 0) {
@@ -114,5 +119,18 @@ size_t gbytes(size_t bytes)
 size_t tbytes(size_t bytes)
 {
     return bytes / TBYTE;
+}
+
+Boolean is_folder(const char *path)
+{
+    struct stat path_stat;
+    stat(path, &path_stat);
+
+    return S_ISDIR(path_stat.st_mode);
+}
+
+stat_io cp_deep(const char *, const char *)
+{
+
 }
 

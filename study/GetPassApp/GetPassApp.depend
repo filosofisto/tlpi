@@ -1,15 +1,10 @@
 # depslib dependency file v1.0
-1477918961 source:/home/eduardo/Private/tlpi/study/IOCopy/main.c
+1479087418 source:/home/eduardo/Private/tlpi/study/GetPassApp/main.c
 	<stdio.h>
 	<stdlib.h>
-	<string.h>
-	"../ErrorSL/error_functions.h"
-	"../IOSL/io.h"
+	"../GetPassSL/getpass.h"
 
-1477770044 /home/eduardo/Private/tlpi/study/ErrorSL/error_functions.h
-
-1477958800 /home/eduardo/Private/tlpi/study/IOSL/io.h
-	"../ErrorSL/tlpi_hdr.h"
+1479086689 /home/eduardo/Private/tlpi/study/GetPassSL/getpass.h
 
 1477770152 /home/eduardo/Private/tlpi/study/ErrorSL/tlpi_hdr.h
 	<sys/types.h>
@@ -23,4 +18,6 @@
 	<sys/file.h>
 
 1477770239 /home/eduardo/Private/tlpi/study/ErrorSL/get_num.h
+
+1477770044 /home/eduardo/Private/tlpi/study/ErrorSL/error_functions.h
 

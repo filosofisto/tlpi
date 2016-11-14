@@ -2,25 +2,25 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="LogBreaker" />
+		<Option title="GetPassApp" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/LogBreaker" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/GetPassApp" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-lcrypt" />
 				</Compiler>
 				<Linker>
-					<Add library="../IOSL/bin/Debug/libIOSL.a" />
-					<Add library="../ErrorSL/bin/Debug/libErrorSL.a" />
+					<Add library="../GetPassSL/bin/Debug/libGetPassSL.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/LogBreaker" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/GetPassApp" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />

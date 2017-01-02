@@ -13,10 +13,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-lcrypt" />
 				</Compiler>
 				<Linker>
+					<Add option="-lcrypt" />
 					<Add library="../GetPassSL/bin/Debug/libGetPassSL.a" />
+					<Add library="../ErrorSL/bin/Debug/libErrorSL.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">

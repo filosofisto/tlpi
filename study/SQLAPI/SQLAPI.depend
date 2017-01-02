@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1483314658 source:/home/eduardo/Private/tlpi/study/SQLAPI/main.cpp
+	<iostream>
+	<SQLAPI.h>
+
+1475500058 /home/eduardo/C/SQLAPI/include/SQLAPI.h
+	<windows.h>
+	<wchar.h>
+	<wctype.h>
+	<sys/time.h>
+	<types.h>
+	<sys/types.h>
+	<sys/timeb.h>
+	<time.h>
+	<stdarg.h>
+	<stdint.h>
+	<limits.h>
+	<string>
+	<hash_map>
+

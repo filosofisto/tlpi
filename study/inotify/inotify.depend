@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1482860419 source:/home/eduardo/Private/tlpi/study/inotify/main.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/inotify.h>
+	<limits.h>
+	"../ErrorSL/tlpi_hdr.h"
+
+1477770152 /home/eduardo/Private/tlpi/study/ErrorSL/tlpi_hdr.h
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<errno.h>
+	<string.h>
+	"get_num.h"
+	"error_functions.h"
+	<sys/file.h>
+
+1477770239 /home/eduardo/Private/tlpi/study/ErrorSL/get_num.h
+
+1477770044 /home/eduardo/Private/tlpi/study/ErrorSL/error_functions.h
+

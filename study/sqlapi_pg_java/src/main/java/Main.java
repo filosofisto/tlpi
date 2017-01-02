@@ -17,10 +17,12 @@ public class Main {
             stm = conn.createStatement();
             rs = stm.executeQuery("select * from users order by id");
 
+            long i = 0;
             while (rs.next()) {
-                System.out.println(
+                /*System.out.println(
                     "id[" + rs.getInt(1) + "] email[" + rs.getString(2) + "]"
-                );
+                );*/
+                i += rs.getInt(1) + rs.getString(2).length();
             }
         } catch (SQLException e) {
             e.printStackTrace();

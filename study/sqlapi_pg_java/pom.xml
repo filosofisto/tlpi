@@ -18,6 +18,7 @@
 
     <build>
         <plugins>
+            <!-- mvn package appassembler:assemble -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
